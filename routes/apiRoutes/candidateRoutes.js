@@ -24,7 +24,7 @@ router.get('/candidates', (req, res) => {
     });
   });
 
-  // Get single candidate with party affiliation
+// Get single candidate with party affiliation
 router.get('/candidate/:id', (req, res) => {
     const sql = `SELECT candidates.*, parties.name 
                  AS party_name 
@@ -46,7 +46,7 @@ router.get('/candidate/:id', (req, res) => {
     });
 });
 
-  // Create a candidate
+// Create a candidate
 router.post('/candidate', ({ body }, res) => {
     // Candidate is allowed not to be affiliated with a party
     const errors = inputCheck(
